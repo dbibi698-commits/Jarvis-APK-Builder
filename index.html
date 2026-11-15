@@ -14,37 +14,53 @@
             align-items: center;
             margin: 0;
             color: #fff;
+            overflow: hidden;
         }
         .login-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            width: 350px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            width: 380px;
             text-align: center;
             color: #333;
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        h2 { margin-top: 0; color: #4a5568; }
+        .login-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+        h2 { margin-top: 0; color: #4a5568; margin-bottom: 30px; font-weight: 700;}
         input {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             margin: 15px 0;
             border: 1px solid #cbd5e0;
-            border-radius: 8px;
+            border-radius: 10px;
             box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+            outline: none;
         }
         button {
             width: 100%;
-            padding: 12px;
-            background-color: #667eea;
+            padding: 15px;
+            background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: opacity 0.3s ease, transform 0.2s ease;
         }
-        button:hover { background-color: #5a67d8; }
+        button:hover { opacity: 0.9; transform: scale(1.02); }
     </style>
 </head>
 <body>
